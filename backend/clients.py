@@ -44,13 +44,13 @@ class ModelConfig(TypedDict):
 # Available model configurations
 MODEL_CONFIGS: Dict[str, ModelConfig] = {
     "llama-3.1-8b": {
-        "base_url": "https://integrate.api.nvidia.com/v1",
+        "base_url": "https://api.groq.com/openai/v1",
         "api_type": "nvdev",
         "completion_config": {
-            "model": "nvdev/meta/llama-3.1-8b-instruct",
+            "model": "openai/gpt-oss-120b",
             "temperature": 0.2,
             "top_p": 0.7,
-            "max_tokens": 2048,
+            "max_tokens": 648,
             "stream": True,
         },
     },

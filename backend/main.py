@@ -113,15 +113,15 @@ def make_message(
 async def start_research(request: ResearchRequest):
     """
     Start or continue a research process and stream the results using JSON streaming.
-    
+
     This endpoint initiates a comprehensive research workflow that includes:
     - Query analysis and topic extraction
     - Web search using Tavily API
     - Content filtering and relevance scoring
     - Report generation using LLMs
-    
+
     The response is streamed as Server-Sent Events (SSE) with real-time progress updates.
-    
+
     Args:
         request (ResearchRequest): The research request containing:
             - dry (bool): Use mock data for testing (default: False)
@@ -129,13 +129,13 @@ async def start_research(request: ResearchRequest):
             - start_from (str): "research" or "reporting" phase
             - prompt (str): Research query (required for research phase)
             - mock_directory (str): Directory for mock data
-    
+
     Returns:
         StreamingResponse: Server-Sent Events stream with research progress
-        
+
     Raises:
         HTTPException: 400 if request parameters are invalid
-        
+
     Example:
         ```bash
         curl -X POST http://localhost:8000/api/research \\
@@ -381,8 +381,8 @@ async def stream_research2_events(
         )
 
         client: Client = OpenAIClient(
-            base_url="https://integrate.api.nvidia.com/v1",
-            model="nvdev/meta/llama-3.1-70b-instruct",
+            base_url="https://api.groq.com/openai/v1",
+            model="llama-3.1-8b-instant",
             trace=comm_trace,
         )
 

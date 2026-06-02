@@ -75,7 +75,7 @@ class ModelConfig:
     )
     top_p: float = field(default_factory=lambda: float(os.getenv("LLM_TOP_P", "0.7")))
     max_tokens: int = field(
-        default_factory=lambda: int(os.getenv("LLM_MAX_TOKENS", "2048"))
+        default_factory=lambda: int(os.getenv("LLM_MAX_TOKENS", "648"))
     )
 
 

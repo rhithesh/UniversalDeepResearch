@@ -159,7 +159,7 @@ class OpenAIClient(Client):
         if api_key is None:
             import os
 
-            api_key = os.getenv("NGC_API_KEY")
+            api_key = os.getenv("GROQ_API")
         self.api_key = api_key
         self.seed = seed
 
@@ -172,7 +172,7 @@ class OpenAIClient(Client):
             "model": self.model,
             "top_p": 1,
             "temperature": 0.0,
-            "max_tokens": 2048,
+            "max_tokens": 648,
             "stream": True,
             "seed": self.seed,
         }
