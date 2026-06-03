@@ -282,6 +282,8 @@ async def do_research(
         "Research phase completed.",
     )
 
+##this has completed
+
 
 async def do_reporting(session_key: str) -> AsyncGenerator[Dict[str, Any], None]:
     """
